@@ -18,11 +18,12 @@
             <a href="#">Jordan Barabotti</a>
         </div>
         <nav class="nav">
-            <a href="#">About</a>
-            <a href="#">Skills</a>
-            <a href="#">Projects</a>
-            <a href="#">Contact</a>
-            <button class="cv">Download my CV</button>
+            <a href="#" data-lang-en="About me" data-lang-fr="À propos de moi">About me</a>
+            <a href="#" data-lang-en="Skills" data-lang-fr="Compétences">Skills</a>
+            <a href="#" data-lang-en="Projects" data-lang-fr="Projets">Projects</a>
+            <a href="#" data-lang-en="Contact" data-lang-fr="Contact">Contact</a>
+            <button id="lang-btn" data-lang-en="English" data-lang-fr="Français">English</button>
+            <button class="cv" data-lang-en="Download my CV" data-lang-fr="Télécharger mon CV">Download my CV</button>
             <button class="theme"> 
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <circle cx="12" cy="12" r="5"/>
@@ -45,9 +46,14 @@
     <section class="hero">
         <div class="herosub">
             <h1>Jordan Barabotti</h1>
-            <p>
-                Web Developer.<span> Online creator. I create websites.</span>
-            </p>
+            <div id="text">
+                <p data-lang-en="Web Developer." data-lang-fr="Développeur Web.">
+                    Web Developer.
+                </p>
+                <p id="span" data-lang-en="Online creator. I create websites." data-lang-fr="Créateur en ligne. Je crée des sites web.">
+                    Online creator. I create websites.
+                </p>
+            </div>
             <div class="socials">
                 <div class="socialupwrapper">
                     <button class="socialup"><i class="fa-brands fa-github"></i> GitHub</button>
@@ -77,10 +83,18 @@
     <section class="skills">
 
         <div class="textskills">
-            <h2>My Skills</h2>
-            <p>
-                They are constantly improving because for me the joy of this job<br> is that you learn something new every day, especially when <br>you are involved, curious and passionate.
-            </p>
+            <h2 data-lang-en="My Skills" data-lang-fr="Mes Compétences">My Skills</h2>
+            <div id="skillText">
+                <p data-lang-en="They are constantly improving because for me the joy of this job" data-lang-fr="Ils s'améliorent constamment car pour moi, la joie de ce métier">
+                    They are constantly improving because for me the joy of this job
+                </p>
+                <p data-lang-en="is that you learn something new every day, especially when" data-lang-fr="est que vous apprenez quelque chose de nouveau chaque jour, surtout quand">
+                    is that you learn something new every day, especially when
+                </p>
+                <p data-lang-en="you are involved, curious and passionate." data-lang-fr="vous êtes impliqués, curieux et passionnés.">
+                    you are involved, curious and passionate.
+                </p>
+            </div>
         </div>
         <div class="skill">
             <div class="design">
@@ -101,7 +115,7 @@
                 <p>Back-end</p>
             </div>
             <div class="other">
-                <p>Other</p>
+                <p data-lang-en="Other" data-lang-fr="Autres">Other</p>
                 <ul>
                     <li><i class="fa-brands fa-github"></i>Git & GitHub</li>
                 </ul>
@@ -113,22 +127,22 @@
     <!-- Mes Projets -->
     <section class="projets">
         
-        <h2>Projects</h2>
+        <h2 data-lang-en="Projects" data-lang-fr="Projets">Projects</h2>
         <div class="cards">
             <div class="card">
                 <img src="Img/card.png" alt="">
-                <p>Project 1</p>
-                <button>See the project ></button>
+                <p data-lang-en="Project 1" data-lang-fr="Projet 1">Project 1</p>
+                <button data-lang-en="See the project >" data-lang-fr="Voir le projet >">See the project ></button>
             </div>
             <div class="card">
                 <img src="Img/card1.webp" alt="">
-                <p>Project 2</p>
-                <button>See the project ></button>
+                <p data-lang-en="Project 2" data-lang-fr="Projet 2">Project 2</p>
+                <button data-lang-en="See the project >" data-lang-fr="Voir le projet >">See the project ></button>
             </div>
             <div class="card">
                 <img src="Img/card3.jpg" alt="">
-                <p>Project 3</p>
-                <button>See the project ></button>
+                <p data-lang-en="Project 3" data-lang-fr="Projet 3">Project 3</p>
+                <button data-lang-en="See the project >" data-lang-fr="Voir le projet >">See the project ></button>
             </div>
         </div>
 
@@ -138,25 +152,32 @@
     <section class="contacts">
         
          <h2>Contact</h2>
-         <p>
-            N'hésitez pas à me contacter.
+         <p data-lang-en="Feel free to contact me if you have any questions or if you want to work with me." data-lang-fr="N'hésitez pas à me contacter si vous avez des questions ou si vous souhaitez travailler avec moi.">
+            Feel free to contact me if you have any questions or if you want to work with me.
          </p> 
         <form action="#" method="post" aria-label="Formualire de contact">
             
             <div class="box">
                 <div class="boxLeft">
-                    <label for="name"><i class="fas fa-size text-primary fa-user"></i>Full name<span class="text-primary">*</span></label>
-                    <input id="name" type="text" name="name" class="form-control" placeholder="Full Name *" required="required">
+                    <label for="name">
+                        <i class="fas fa-size text-primary fa-user"></i>
+                        <span class="label-text" data-lang-en="Full name" data-lang-fr="Nom Prénom">Full name</span>
+                        <span class="star" aria-label="Champ requis">
+                            *
+                        </span>
+                    </label>
 
-                    <label for="email"><i class="fas fa-size text-primary fa-at"></i>Email<span>*</span></label>
-                    <input id="email" type="email" name="email" class="form-control" placeholder="Enter your email *" required="required">
+                    <input data-placeholder-en="Full Name *" data-placeholder-fr="Nom Prénom *" id="name" type="text" name="name" class="form-control" placeholder="Full name *" required="required">
+
+                    <label for="email"><i class="fas fa-size text-primary fa-at"></i>Email<span class="star">*</span></label>
+                    <input data-placeholder-en="Enter your email *" data-placeholder-fr="Entrez votre email *" id="email" type="email" name="email" class="form-control" placeholder="Enter your email *" required="required">
                 </div>
 
                 <div class="boxRight">
-                    <label for="message"><i class="fas fa-size text-primary fa-comment-dots"></i>Message<span>*</span></label>
-                    <textarea id="message" name="message" class="form-control" placeholder="Enter your message *" rows="6" required="required"></textarea>
+                    <label for="message"><i class="fas fa-size text-primary fa-comment-dots"></i>Message<span class="star">*</span></label>
+                    <textarea data-placeholder-en="Enter your message *" data-placeholder-fr="Entrez votre message *" id="message" name="message" class="form-control" placeholder="Enter your message *" rows="6" required="required"></textarea>
 
-                    <input type="submit" class="submitButton" id="submit" value="Submit">
+                    <button data-lang-en="Submit" data-lang-fr="Envoyer" type="submit">Submit</button>
                 </div>
             </div>
 
