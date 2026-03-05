@@ -46,7 +46,7 @@
         <div class="herosub">
             <h1>Jordan Barabotti</h1>
             <p>
-                Web Developer.<span> Creator online. I create websites.</span>
+                Web Developer.<span> Online creator. I create websites.</span>
             </p>
             <div class="socials">
                 <div class="socialupwrapper">
@@ -69,12 +69,11 @@
                 </div>
             </div>
         </div>
-        <img src="Img/Moi.png" alt="">
+        <spline-viewer class="robot-3d" url="https://prod.spline.design/L4XW25QEbp7UuN-L/scene.splinecode"></spline-viewer>
 
     </section>
 
     <!-- Mes compétences -->
-
     <section class="skills">
 
         <div class="textskills">
@@ -110,10 +109,10 @@
         </div>
 
     </section>
-
+    
+    <!-- Mes Projets -->
     <section class="projets">
-
-        <!-- Mes Projets -->
+        
         <h2>Projects</h2>
         <div class="cards">
             <div class="card">
@@ -134,8 +133,45 @@
         </div>
 
     </section>
+    
+    <!-- Contact -->
+    <section class="contacts">
+        
+         <h2>Contact</h2>
+         <p>
+            N'hésitez pas à me contacter.
+         </p> 
+        <form action="#" method="post" aria-label="Formualire de contact">
+            
+            <div class="box">
+                <div class="boxLeft">
+                    <label for="name"><i class="fas fa-size text-primary fa-user"></i>Full name<span class="text-primary">*</span></label>
+                    <input id="name" type="text" name="name" class="form-control" placeholder="Full Name *" required="required">
+
+                    <label for="email"><i class="fas fa-size text-primary fa-at"></i>Email<span>*</span></label>
+                    <input id="email" type="email" name="email" class="form-control" placeholder="Enter your email *" required="required">
+                </div>
+
+                <div class="boxRight">
+                    <label for="message"><i class="fas fa-size text-primary fa-comment-dots"></i>Message<span>*</span></label>
+                    <textarea id="message" name="message" class="form-control" placeholder="Enter your message *" rows="6" required="required"></textarea>
+
+                    <input type="submit" class="submitButton" id="submit" value="Submit">
+                </div>
+            </div>
+
+        </form>
+    </section>
+    
+    <!-- Bas de la page -->
+    <footer class="footer">
+        <p>
+            © Jordan barabotti | 2026
+        </p>
+    </footer>
 
     <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.57/build/spline-viewer.js"></script>
 
 </body>
 </html>
