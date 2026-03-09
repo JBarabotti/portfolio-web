@@ -36,4 +36,21 @@ const langBtn = document.getElementById("lang-btn");
   });
 
 
+// Alerte projet en cours
+document.querySelectorAll(".dev").forEach(card => {
+  card.addEventListener("click", () => {
+    alert("Aucun projet n'est encore disponible, mais je travaille dessus ! N'hésitez pas à me contacter pour en savoir plus.");
+  });
+});
 
+
+function showAlert(message) {
+  const alert = document.getElementById("alert");
+  alert.textContent = message;
+  alert.style.display = "block";
+  
+  // disparaît après 3 secondes
+  setTimeout(() => {
+    alert.style.display = "none";
+  }, 3000);
+}
