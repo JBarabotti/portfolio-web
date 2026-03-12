@@ -43,14 +43,22 @@ document.querySelectorAll(".dev").forEach(card => {
   });
 });
 
+// Animation de révélation au scroll
+const reveals = document.querySelectorAll('.reveal-up, .reveal-down, .reveal-left, .reveal-right, .reveal-scale');
 
-function showAlert(message) {
-  const alert = document.getElementById("alert");
-  alert.textContent = message;
-  alert.style.display = "block";
-  
-  // disparaît après 3 secondes
-  setTimeout(() => {
-    alert.style.display = "none";
-  }, 3000);
+function scrollReveal() {
+  for (let i = 0; i < reveals.length; i++) {
+    const windowHeight = window.innerHeight;
+    const elementTop = reveals[i].getBoundingClientRect().top;
+    const revealPoint = 150;
+
+    if (elementTop < windowHeight - revealPoint) {
+      reveals[i].classList.add('active');
+    } else {
+      reveals[i].classList.remove('active');
+    }
+  }
 }
+
+window.addEventListener('scroll', scrollReveal);
+scrollReveal();

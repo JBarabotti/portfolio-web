@@ -17,6 +17,7 @@
             <img src="Img/Moi.png" alt="Logo du site" width="100">
             <a href="#">Jordan Barabotti</a>
         </div>
+        <i class="fas fa-bars"></i>
         <nav class="nav">
             <a class="link" href="#" data-lang-en="About me" data-lang-fr="À propos de moi">About me</a>
             <a class="link" href="#skills" data-lang-en="Skills" data-lang-fr="Compétences">Skills</a>
@@ -83,8 +84,8 @@
     <section id="skills" class="skills">
 
         <div class="textskills">
-            <h2 data-lang-en="My Skills" data-lang-fr="Mes Compétences">My Skills</h2>
-            <div id="skillText">
+            <h2 data-lang-en="My Skills" data-lang-fr="Mes Compétences" class="reveal-up">My Skills</h2>
+            <div id="skillText" class="reveal-down">
                 <p data-lang-en="They are constantly improving because for me the joy of this job" data-lang-fr="Ils s'améliorent constamment car pour moi, la joie de ce métier">
                     They are constantly improving because for me the joy of this job
                 </p>
@@ -96,7 +97,7 @@
                 </p>
             </div>
         </div>
-        <div class="skill">
+        <div class="skill reveal-down">
             <div class="design">
                 <p>Design</p>
                 <ul>
@@ -127,19 +128,19 @@
     <!-- Mes Projets -->
     <section id="projets" class="projets">
         
-        <h2 data-lang-en="Projects" data-lang-fr="Projets">Projects</h2>
+        <h2 data-lang-en="Projects" data-lang-fr="Projets" class="reveal-up">Projects</h2>
         <div class="cards">
-            <div class="card">
+            <div class="card reveal-left">
                 <img src="Img/card.png" alt="">
                 <p data-lang-en="Project 1" data-lang-fr="Projet 1">Project 1</p>
                 <button class="dev" data-lang-en="No concrete project for the moment" data-lang-fr="Pas de projet concret pour le moment">No concrete project for the moment</button>
             </div>
-            <div class="card">
+            <div class="card reveal-scale">
                 <img src="Img/card1.webp" alt="">
                 <p data-lang-en="Project 2" data-lang-fr="Projet 2">Project 2</p>
                 <button class="dev" data-lang-en="No concrete project for the moment" data-lang-fr="Pas de projet concret pour le moment">No concrete project for the moment</button>
             </div>
-            <div class="card">
+            <div class="card reveal-right">
                 <img src="Img/card3.jpg" alt="">
                 <p data-lang-en="Project 3" data-lang-fr="Projet 3">Project 3</p>
                 <button class="dev" data-lang-en="No concrete project for the moment" data-lang-fr="Pas de projet concret pour le moment">No concrete project for the moment</button>
@@ -151,14 +152,14 @@
     <!-- Contact -->
     <section id="contacts" class="contacts">
         
-         <h2>Contact</h2>
-         <p data-lang-en="Feel free to contact me if you have any questions or if you want to work with me." data-lang-fr="N'hésitez pas à me contacter si vous avez des questions ou si vous souhaitez travailler avec moi.">
+         <h2 class="reveal-up">Contact</h2>
+         <p data-lang-en="Feel free to contact me if you have any questions or if you want to work with me." data-lang-fr="N'hésitez pas à me contacter si vous avez des questions ou si vous souhaitez travailler avec moi." class="reveal-down">
             Feel free to contact me if you have any questions or if you want to work with me.
          </p> 
         <form action="#" method="post" aria-label="Formualire de contact">
             
             <div class="box">
-                <div class="boxLeft">
+                <div class="boxLeft reveal-left">
                     <label for="name">
                         <i class="fas fa-size text-primary fa-user"></i>
                         <span class="label-text" data-lang-en="Full name" data-lang-fr="Nom Prénom">Full name</span>
@@ -174,10 +175,10 @@
                 </div>
 
                 <div class="boxRight">
-                    <label for="message"><i class="fas fa-size text-primary fa-comment-dots"></i>Message<span class="star">*</span></label>
-                    <textarea data-placeholder-en="Enter your message *" data-placeholder-fr="Entrez votre message *" id="message" name="message" class="form-control" placeholder="Enter your message *" rows="6" required="required"></textarea>
+                    <label class="reveal-right" for="message"><i class="fas fa-size text-primary fa-comment-dots"></i>Message<span class="star">*</span></label>
+                    <textarea data-placeholder-en="Enter your message *" data-placeholder-fr="Entrez votre message *" id="message" name="message" class="form-control reveal-right" placeholder="Enter your message *" rows="6" required="required"></textarea>
 
-                    <button data-lang-en="Submit" data-lang-fr="Envoyer" type="submit">Submit</button>
+                    <button data-lang-en="Submit" data-lang-fr="Envoyer" type="submit" class="reveal-down">Submit</button>
                 </div>
             </div>
 

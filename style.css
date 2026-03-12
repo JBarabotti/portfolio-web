@@ -34,7 +34,58 @@ body {
   }
 }
 
+/* Animation reveal */
 
+.reveal-up {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal-up.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-down {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal-down.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-left {
+    transform: translateX(-500px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal-left.active {
+    transform: translateX(0);
+}
+
+.reveal-right {
+    transform: translateX(500px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal-right.active {
+    transform: translateX(0);
+}
+
+.reveal-scale {
+    transform: scale(0);
+    opacity: 0;
+    transition: all 0.8s ease-out;
+}
+
+.reveal-scale.active {
+    transform: scale(1);
+    opacity: 1;
+}
 
 /* Menu de navigation */
 #header {
@@ -96,6 +147,10 @@ body {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
+}
+
+.fas.fa-bars {
+    display: none;
 }
 
 .nav {
@@ -493,6 +548,8 @@ spline-viewer div a {
     display: flex;
     justify-content: center;
 }
+
+
 
 #skillText {
     font-family: "Poltawski Nowy", serif;
@@ -919,4 +976,80 @@ button[type="submit"]:hover {
     font-size: 17px;
     color: white;
     padding: 30px;
+}
+
+
+/* Format tablette */
+@media (max-width: 1024px) {
+    body {
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        overflow-x: hidden;
+    }
+
+    /* menu de navigation */
+    .fas.fa-bars {
+        display: block;
+        font-size: 34px;
+        cursor: pointer;
+        padding-right: 40px;
+    }
+
+    #header.small .fas.fa-bars {
+        font-size: 28px;
+    }
+    
+    .nav {
+        display: none;
+    }
+
+    /* Section hero */
+    .herosub {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .hero h1 {
+        font-size: 70px;
+    }
+
+    #text {
+        flex-direction: column;
+            gap: 0;
+            justify-content: center;
+            align-items: center;
+    }
+
+    .hero p {
+        font-size: 40px;
+    }
+
+    .robot-3d {
+        display: none;
+    }
+
+    .socials {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Section skills */
+
+
+}
+
+/* Format mobile */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
 }
