@@ -9,6 +9,7 @@ window.addEventListener("scroll", function() {
   }
 });
 
+
 // Changement de langue
 const langBtn = document.getElementById("lang-btn");
   let currentLang = "en"; // langue par défaut
@@ -36,13 +37,6 @@ const langBtn = document.getElementById("lang-btn");
   });
 
 
-// Alerte projet en cours
-document.querySelectorAll(".dev").forEach(card => {
-  card.addEventListener("click", () => {
-    alert("Aucun projet n'est encore disponible, mais je travaille dessus ! N'hésitez pas à me contacter pour en savoir plus.");
-  });
-});
-
 // Animation de révélation au scroll
 const reveals = document.querySelectorAll('.reveal-up, .reveal-down, .reveal-left, .reveal-right, .reveal-scale');
 
@@ -62,3 +56,62 @@ function scrollReveal() {
 
 window.addEventListener('scroll', scrollReveal);
 scrollReveal();
+
+
+// Empêche le scroll horizontal
+document.body.addEventListener('scroll', () => {
+    document.body.scrollLeft = 0;
+});
+
+
+// Sélection du burger et du nav
+const burger = document.querySelector('#header .fa-bars');
+const nav = document.querySelector('#header .nav');
+const cv = document.querySelector('#header .cv');
+
+
+// Au clic sur le burger
+burger.addEventListener('click', () => {
+    if (nav.classList.contains('show')) {
+        nav.classList.add('hide');
+
+        setTimeout(() => {
+            nav.classList.remove('show', 'hide');
+        }, 500);
+    } else {
+        nav.classList.add('show');
+    }
+});
+
+
+
+
+// Tous ce qui n'est pas encore fonctionnel
+
+// Thème sombre/clair ps: pas encore fonctionnel
+document.querySelectorAll(".theme").forEach(btn => {
+  btn.addEventListener("click", () => {
+    alert("Cette fonctionnalité est en cours de développement, mais elle sera bientôt disponible ! Restez à l'écoute pour une expérience personnalisée.");
+  });
+});
+
+// Alerte projet en cours
+document.querySelectorAll(".dev").forEach(card => {
+  card.addEventListener("click", () => {
+    alert("Aucun projet n'est encore disponible, mais je travaille dessus ! N'hésitez pas à me contacter pour en savoir plus.");
+  });
+});
+
+// Boutons sociaux pas encore fonctionnels
+document.querySelectorAll(".socialx").forEach(btn => {
+  btn.addEventListener("click", () => {
+    alert("Cette fonctionnalité est en cours de développement, mais elle sera bientôt disponible ! Restez à l'écoute pour plus de mises à jour.");
+  });
+});
+
+// Contact form pas encore fonctionnel
+document.getElementById("submit")
+.addEventListener("click", () => {
+  alert("Le formulaire de contact est en cours de développement, mais vous pouvez toujours me contacter directement par email à jordan.barabotti170104@gmail.com");
+});
+

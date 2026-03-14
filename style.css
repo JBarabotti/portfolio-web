@@ -24,7 +24,6 @@ html,body {
     background: var(--main-background);
     transform: translateY(40px) scale(0.98);
     animation: ultraSmooth 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-    overflow-x: hidden;
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -35,6 +34,10 @@ html,body {
     opacity: 1;
     transform: translateY(0) scale(1);
   }
+}
+
+.page-wrapper {
+    overflow-x: hidden; /* empêche la barre horizontale */
 }
 
 /* Animation reveal */
@@ -419,6 +422,7 @@ html,body {
 .socials {
     display: flex;
     gap: 20px;
+    z-index: 1
 }
 
 .socialup {
@@ -509,7 +513,7 @@ html,body {
 .robot-3d {
   position: fixed;
   top: -3%;
-  right: -9.5%;
+  right: -0%;
   width: 45vw;
   height: 130vh;
   z-index: 0;
@@ -976,6 +980,14 @@ button[type="submit"]:hover {
 }
 
 
+@media (max-width: 1350px) {
+
+    /* Robot-3D */
+    .robot-3d {
+        display: none;
+    }
+}
+
 /* Format tablette */
 @media (max-width: 1024px) {
     body {
@@ -985,6 +997,10 @@ button[type="submit"]:hover {
     }
 
     /* menu de navigation */
+    .header {
+        padding: 0;
+    }
+
     .fas.fa-bars {
         display: block;
         font-size: 34px;
@@ -997,6 +1013,85 @@ button[type="submit"]:hover {
     }
     
     .nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--secondary-background);
+        background-blend-mode: multiply;
+        border-radius: 25px;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 10px 0;
+        align-items: center;
+        gap: 1rem;
+        display: none;
+        z-index: 1000;
+        transition: all 0.3s ease;
+         box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    .nav.show {
+        display: flex;
+        animation: navSlideDown 0.5s ease forwards;
+    }
+
+    @keyframes navSlideDown {
+        from {
+            transform: translateY(-20px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .nav.hide {
+    animation: navSlideUp 0.5s ease forwards;
+    }
+
+    @keyframes navSlideUp {
+        from {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        to {
+            transform: translateY(-20px);
+            opacity: 0;
+        }
+    }
+
+    header .fa-bars {
+        display: block;
+        background: linear-gradient(to right, #000000 0%, #53346D 51%, #000000 100%);
+        -webkit-background-clip: text;  
+        -webkit-text-fill-color: transparent; 
+    }
+
+    .nav button.cv,
+    .nav button.theme {
+        width: 80%;
+        margin: 0.5rem 0;
+    }
+
+    .cv {
+        width: 80%;
+        text-align: center;
+        left: 7%;
+    }
+
+    .theme {
+        width: 80%;
+        text-align: center;
+        left: 7%;
+    }
+
+    .link::before {
+        display: none;
+    }
+
+    .link::after {
         display: none;
     }
 
@@ -1039,8 +1134,13 @@ button[type="submit"]:hover {
 
 }
 
+
+
 /* Format mobile */
 @media (max-width: 768px) {
+
+    /* Menu de navigation */
+
     /* Section hero */
     .hero {
         flex-direction: column;
@@ -1151,6 +1251,8 @@ button[type="submit"]:hover {
         button[type="submit"] {
                 width: 50%;
         }
+
+        
 
 
 

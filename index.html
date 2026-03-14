@@ -17,7 +17,7 @@
             <img src="Img/Moi.png" alt="Logo du site" width="100">
             <a href="#">Jordan Barabotti</a>
         </div>
-        <i class="fas fa-bars"></i>
+        
         <nav class="nav">
             <a class="link" href="#" data-lang-en="About me" data-lang-fr="À propos de moi">About me</a>
             <a class="link" href="#skills" data-lang-en="Skills" data-lang-fr="Compétences">Skills</a>
@@ -25,7 +25,7 @@
             <a class="link" href="#contacts" data-lang-en="Contact" data-lang-fr="Contact">Contact</a>
             <button id="lang-btn" data-lang-en="English" data-lang-fr="Français">English</button>
             <a href="Jordan Barabotti - CV.pdf" download><button class="cv" data-lang-en="Download my CV" data-lang-fr="Télécharger mon CV">Download my CV</button></a>
-            <button class="theme"> 
+            <button class="theme" id="theme"> 
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 20" width="70" height="50" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <defs> 
                         <linearGradient id="gradCustom" x1="0%" y1="0%" x2="100%" y2="0%"> 
@@ -40,157 +40,161 @@
             </button>
 
         </nav>
+        <i class="fas fa-bars"></i>
 
     </header>
 
     <!-- Section hero -->
-    <section class="hero">
-        <div class="herosub">
-            <h1>Jordan Barabotti</h1>
-            <div id="text">
-                <p data-lang-en="Web Developer." data-lang-fr="Développeur Web.">
-                    Web Developer.
-                </p>
-                <p id="span" data-lang-en="Online creator. I create websites." data-lang-fr="Créateur en ligne. Je crée des sites web.">
-                    Online creator. I create websites.
-                </p>
+    <div class="page-wrapper">
+        <section class="hero">
+            <div class="herosub">
+                <h1>Jordan Barabotti</h1>
+                <div id="text">
+                    <p data-lang-en="Web Developer." data-lang-fr="Développeur Web.">
+                        Web Developer.
+                    </p>
+                    <p id="span" data-lang-en="Online creator. I create websites." data-lang-fr="Créateur en ligne. Je crée des sites web.">
+                        Online creator. I create websites.
+                    </p>
+                </div>
+                <div class="socials">
+                    <div class="socialupwrapper">
+                        <a href="https://github.com/JBarabotti" target="blank"><button class="socialup"><i class="fa-brands fa-github"></i> GitHub</button></a>
+                    </div>
+                    <div class="socialdownwrapper">
+                        <button class="socialdown socialx"><i class="fa-brands fa-twitter"></i> Twitter</button>
+                    </div>
+                    <div class="socialupwrapper">
+                        <a href="mailto:jordan.barabotti170104@gmail.com" target="blank"><button class="socialup"><i class="fa-regular fa-envelope"></i> Mail</button></a>
+                    </div>
+                    <div class="socialdownwrapper">
+                        <a href="https://www.linkedin.com/in/jordan-barabotti-b82009257/" target="blank"><button class="socialdown"><i class="fa-brands fa-linkedin"></i> LinkedIn</button></a>
+                    </div>
+                    <div class="socialupwrapper">
+                        <button class="socialup socialx"><i class="fa-brands fa-instagram"></i> Instagram</button>
+                    </div>
+                    <div class="socialdownwrapper">
+                        <button class="socialdown socialx"><i class="fa-brands fa-discord"></i> Discord</button>
+                    </div>
+                </div>
             </div>
-            <div class="socials">
-                <div class="socialupwrapper">
-                    <a href="https://github.com/JBarabotti" target="blank"><button class="socialup"><i class="fa-brands fa-github"></i> GitHub</button></a>
-                </div>
-                <div class="socialdownwrapper">
-                    <button class="socialdown"><i class="fa-brands fa-twitter"></i> Twitter</button>
-                </div>
-                <div class="socialupwrapper">
-                    <a href="mailto:jordan.barabotti170104@gmail.com" target="blank"><button class="socialup"><i class="fa-regular fa-envelope"></i> Mail</button></a>
-                </div>
-                <div class="socialdownwrapper">
-                    <a href="https://www.linkedin.com/in/jordan-barabotti-b82009257/" target="blank"><button class="socialdown"><i class="fa-brands fa-linkedin"></i> LinkedIn</button></a>
-                </div>
-                <div class="socialupwrapper">
-                    <button class="socialup"><i class="fa-brands fa-instagram"></i> Instagram</button>
-                </div>
-                <div class="socialdownwrapper">
-                    <button class="socialdown"><i class="fa-brands fa-discord"></i> Discord</button>
-                </div>
-            </div>
-        </div>
-        <spline-viewer class="robot-3d" url="https://prod.spline.design/L4XW25QEbp7UuN-L/scene.splinecode"></spline-viewer>
+            <spline-viewer class="robot-3d" url="https://prod.spline.design/L4XW25QEbp7UuN-L/scene.splinecode"></spline-viewer>
 
-    </section>
+        </section>
 
-    <!-- Mes compétences -->
-    <section id="skills" class="skills">
+        <!-- Mes compétences -->
+        <section id="skills" class="skills">
 
-        <div class="textskills">
-            <h2 data-lang-en="My Skills" data-lang-fr="Mes Compétences" class="reveal-up">My Skills</h2>
-            <div id="skillText" class="reveal-down">
-                <p data-lang-en="They are constantly improving because for me the joy of this job" data-lang-fr="Ils s'améliorent constamment car pour moi, la joie de ce métier">
-                    They are constantly improving because for me the joy of this job
-                </p>
-                <p data-lang-en="is that you learn something new every day, especially when" data-lang-fr="est que vous apprenez quelque chose de nouveau chaque jour, surtout quand">
-                    is that you learn something new every day, especially when
-                </p>
-                <p data-lang-en="you are involved, curious and passionate." data-lang-fr="vous êtes impliqués, curieux et passionnés.">
-                    you are involved, curious and passionate.
-                </p>
+            <div class="textskills">
+                <h2 data-lang-en="My Skills" data-lang-fr="Mes Compétences" class="reveal-up">My Skills</h2>
+                <div id="skillText" class="reveal-down">
+                    <p data-lang-en="They are constantly improving because for me the joy of this job" data-lang-fr="Ils s'améliorent constamment car pour moi, la joie de ce métier">
+                        They are constantly improving because for me the joy of this job
+                    </p>
+                    <p data-lang-en="is that you learn something new every day, especially when" data-lang-fr="est que vous apprenez quelque chose de nouveau chaque jour, surtout quand">
+                        is that you learn something new every day, especially when
+                    </p>
+                    <p data-lang-en="you are involved, curious and passionate." data-lang-fr="vous êtes impliqués, curieux et passionnés.">
+                        you are involved, curious and passionate.
+                    </p>
+                </div>
             </div>
-        </div>
-        <div class="skill reveal-down">
-            <div class="design">
-                <p>Design</p>
-                <ul>
-                    <li><i class="fa-brands fa-figma"></i>Figma</li>
-                </ul>
+            <div class="skill reveal-down">
+                <div class="design">
+                    <p>Design</p>
+                    <ul>
+                        <li><i class="fa-brands fa-figma"></i>Figma</li>
+                    </ul>
+                </div>
+                <div class="front-end">
+                    <p>Front-end</p>
+                    <ul>
+                        <li><i class="fa-brands fa-html5"></i>HTML5</li>
+                        <li><i class="fa-brands fa-css3"></i>CSS</li>
+                        <li><i class="fa-brands fa-js"></i>JavaScript</li>
+                    </ul>
+                </div>
+                <div class="back-end">
+                    <p>Back-end</p>
+                </div>
+                <div class="other">
+                    <p data-lang-en="Other" data-lang-fr="Autres">Other</p>
+                    <ul>
+                        <li><i class="fa-brands fa-github"></i>Git & GitHub</li>
+                    </ul>
+                </div>
             </div>
-            <div class="front-end">
-                <p>Front-end</p>
-                <ul>
-                    <li><i class="fa-brands fa-html5"></i>HTML5</li>
-                    <li><i class="fa-brands fa-css3"></i>CSS</li>
-                    <li><i class="fa-brands fa-js"></i>JavaScript</li>
-                </ul>
-            </div>
-            <div class="back-end">
-                <p>Back-end</p>
-            </div>
-            <div class="other">
-                <p data-lang-en="Other" data-lang-fr="Autres">Other</p>
-                <ul>
-                    <li><i class="fa-brands fa-github"></i>Git & GitHub</li>
-                </ul>
-            </div>
-        </div>
 
-    </section>
+        </section>
     
-    <!-- Mes Projets -->
-    <section id="projets" class="projets">
+        <!-- Mes Projets -->
+        <section id="projets" class="projets">
         
-        <h2 data-lang-en="Projects" data-lang-fr="Projets" class="reveal-up">Projects</h2>
-        <div class="cards">
-            <div class="card reveal-left">
-                <img src="Img/card.png" alt="">
-                <p data-lang-en="Project 1" data-lang-fr="Projet 1">Project 1</p>
-                <button class="dev" data-lang-en="No concrete project for the moment" data-lang-fr="Pas de projet concret pour le moment">No concrete project for the moment</button>
+            <h2 data-lang-en="Projects" data-lang-fr="Projets" class="reveal-up">Projects</h2>
+            <div class="cards">
+                <div class="card reveal-left">
+                    <img src="Img/card.png" alt="">
+                    <p data-lang-en="Project 1" data-lang-fr="Projet 1">Project 1</p>
+                    <button class="dev" data-lang-en="No concrete project for the moment" data-lang-fr="Pas de projet concret pour le moment">No concrete project for the moment</button>
+                </div>
+                <div class="card reveal-scale">
+                    <img src="Img/card1.webp" alt="">
+                    <p data-lang-en="Project 2" data-lang-fr="Projet 2">Project 2</p>
+                    <button class="dev" data-lang-en="No concrete project for the moment" data-lang-fr="Pas de projet concret pour le moment">No concrete project for the moment</button>
+                </div>
+                <div class="card reveal-right">
+                    <img src="Img/card3.jpg" alt="">
+                    <p data-lang-en="Project 3" data-lang-fr="Projet 3">Project 3</p>
+                    <button class="dev" data-lang-en="No concrete project for the moment" data-lang-fr="Pas de projet concret pour le moment">No concrete project for the moment</button>
+                </div>
             </div>
-            <div class="card reveal-scale">
-                <img src="Img/card1.webp" alt="">
-                <p data-lang-en="Project 2" data-lang-fr="Projet 2">Project 2</p>
-                <button class="dev" data-lang-en="No concrete project for the moment" data-lang-fr="Pas de projet concret pour le moment">No concrete project for the moment</button>
-            </div>
-            <div class="card reveal-right">
-                <img src="Img/card3.jpg" alt="">
-                <p data-lang-en="Project 3" data-lang-fr="Projet 3">Project 3</p>
-                <button class="dev" data-lang-en="No concrete project for the moment" data-lang-fr="Pas de projet concret pour le moment">No concrete project for the moment</button>
-            </div>
-        </div>
 
-    </section>
+        </section>
     
-    <!-- Contact -->
-    <section id="contacts" class="contacts">
+        <!-- Contact -->
+        <section id="contacts" class="contacts">
         
-         <h2 class="reveal-up">Contact</h2>
-         <p data-lang-en="Feel free to contact me if you have any questions or if you want to work with me." data-lang-fr="N'hésitez pas à me contacter si vous avez des questions ou si vous souhaitez travailler avec moi." class="reveal-down">
-            Feel free to contact me if you have any questions or if you want to work with me.
-         </p> 
-        <form action="#" method="post" aria-label="Formualire de contact">
+            <h2 class="reveal-up">Contact</h2>
+            <p data-lang-en="Feel free to contact me if you have any questions or if you want to work with me." data-lang-fr="N'hésitez pas à me contacter si vous avez des questions ou si vous souhaitez travailler avec moi." class="reveal-down">
+                Feel free to contact me if you have any questions or if you want to work with me.
+            </p> 
+            <form action="#" method="post" aria-label="Formualire de contact">
             
-            <div class="box">
-                <div class="boxLeft reveal-left">
-                    <label for="name">
-                        <i class="fas fa-size text-primary fa-user"></i>
-                        <span class="label-text" data-lang-en="Full name" data-lang-fr="Nom Prénom">Full name</span>
-                        <span class="star" aria-label="Champ requis">
-                            *
-                        </span>
-                    </label>
+                <div class="box">
+                    <div class="boxLeft reveal-left">
+                        <label for="name">
+                            <i class="fas fa-size text-primary fa-user"></i>
+                            <span class="label-text" data-lang-en="Full name" data-lang-fr="Nom Prénom">Full name</span>
+                            <span class="star" aria-label="Champ requis">
+                                *
+                            </span>
+                        </label>
 
-                    <input data-placeholder-en="Full Name *" data-placeholder-fr="Nom Prénom *" id="name" type="text" name="name" class="form-control" placeholder="Full name *" required="required">
+                        <input data-placeholder-en="Full Name *" data-placeholder-fr="Nom Prénom *" id="name" type="text" name="name" class="form-control" placeholder="Full name *" required="required">
 
-                    <label for="email"><i class="fas fa-size text-primary fa-at"></i>Email<span class="star">*</span></label>
-                    <input data-placeholder-en="Enter your email *" data-placeholder-fr="Entrez votre email *" id="email" type="email" name="email" class="form-control" placeholder="Enter your email *" required="required">
+                        <label for="email"><i class="fas fa-size text-primary fa-at"></i>Email<span class="star">*</span></label>
+                        <input data-placeholder-en="Enter your email *" data-placeholder-fr="Entrez votre email *" id="email" type="email" name="email" class="form-control" placeholder="Enter your email *" required="required">
+                    </div>
+
+                    <div class="boxRight">
+                        <label class="reveal-right" for="message"><i class="fas fa-size text-primary fa-comment-dots"></i>Message<span class="star">*</span></label>
+                        <textarea data-placeholder-en="Enter your message *" data-placeholder-fr="Entrez votre message *" id="message" name="message" class="form-control reveal-right" placeholder="Enter your message *" rows="6" required="required"></textarea>
+
+                        <button data-lang-en="Submit" data-lang-fr="Envoyer" type="submit" id="submit">Submit</button>
+                    </div>
                 </div>
 
-                <div class="boxRight">
-                    <label class="reveal-right" for="message"><i class="fas fa-size text-primary fa-comment-dots"></i>Message<span class="star">*</span></label>
-                    <textarea data-placeholder-en="Enter your message *" data-placeholder-fr="Entrez votre message *" id="message" name="message" class="form-control reveal-right" placeholder="Enter your message *" rows="6" required="required"></textarea>
-
-                    <button data-lang-en="Submit" data-lang-fr="Envoyer" type="submit">Submit</button>
-                </div>
-            </div>
-
-        </form>
-    </section>
+            </form>
+        </section>
     
-    <!-- Bas de la page -->
-    <footer class="footer">
-        <p>
-            © Jordan barabotti | 2026
-        </p>
-    </footer>
+        <!-- Bas de la page -->
+        <footer class="footer">
+            <p>
+                © Jordan barabotti | 2026
+            </p>
+        </footer>
+
+    </div>
 
     <script src="script.js"></script>
     <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.57/build/spline-viewer.js"></script>
