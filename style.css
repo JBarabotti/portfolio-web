@@ -730,10 +730,63 @@ spline-viewer div a {
     transform: scale(1.1);
 }
 
-.card img {
+.projet-img {
     width: 100%;
     height: 200px;
     object-fit: cover;
+}
+
+.projet1 {
+    position: relative;
+}
+
+.projet1 img:first-child {
+    opacity: 0.8;
+    display: block;
+    transition: opacity 0.4s ease;
+}
+
+.projet1:hover img:first-child {
+    opacity: 0.5;
+    transition: opacity 0.4s ease;
+}
+
+.cafe-dunia {
+    position: absolute;
+    width: 100px;
+    top: 25%;
+    left: 35%;
+    opacity: 1;
+    z-index: 2;
+    justify-content: center;
+    transition: opacity 0.4s ease;
+}
+
+.endev {
+    opacity: 0;
+    z-index: 2;
+    position: absolute;
+    left: 12%;
+    top: 35%;
+    font-size: 18px;
+    transition: opacity 0.4s ease;
+}
+
+.projet1:hover .endev {
+    opacity: 1;
+}
+
+.projet1:hover .cafe-dunia {
+    opacity: 0;
+}
+
+.projet2 img:first-child {
+    opacity: 0.8;
+    transition: opacity 0.4s ease;
+}
+
+.projet2:hover img:first-child {
+    opacity: 0.7;
 }
 
 .card p {
@@ -746,28 +799,30 @@ spline-viewer div a {
     color: white;
 }
 
-.card button {
-  margin: 15px;
-  padding: 10px;
-  font-family: "Adamina", serif;
-  font-weight: 400;
-  font-style: normal;
-  color: white;
-  border-radius: 8px;
-  border: 2px solid transparent;
-  background: linear-gradient(to right, #141E30 0%, #243B55 51%, #141E30 100%) padding-box, 
-              linear-gradient(to right, #2C3E50, #4CA1AF) border-box;
+.card a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin: 17px;
+    padding: 8px;
+    font-family: "Adamina", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    background: linear-gradient(to right, #141E30 0%, #243B55 51%, #141E30 100%) padding-box, 
+                linear-gradient(to right, #2C3E50, #4CA1AF) border-box;
             background-size: 200% auto;
-  cursor: pointer;
-  transition: transform 0.3s ease, background-position 0.5s ease;
+    transition: transform 0.3s ease, background-position 0.5s ease;
 }
 
-.card button:hover {
+.card a:hover {
     background-position: right center;
     transform: translateY(-6px);
 }
-
-
 
 /* Contact */
 .contacts {
